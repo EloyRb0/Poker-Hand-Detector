@@ -2,4 +2,4 @@
 /Lib
 /Scripts
 
-pyenv.cfg
+**/pyvenv.cfg
