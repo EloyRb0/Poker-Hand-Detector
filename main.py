@@ -2,9 +2,10 @@ import cv2
 import numpy as np
 import cardDetector
 import valueDetector
+import suitDetector
 
 # Main Program
-img = cv2.imread('C:/Users/jsnaj/Desktop/TEC/Semestre4/SemanaTEC/Poker-Hand-Detector/Player1.jpg')
+img = cv2.imread('Table.jpg')
 img = cv2.resize(img, (1000, 1000))  # Resize for consistency
 imgHsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
@@ -29,6 +30,7 @@ for cnt in contours:
         if len(approx) == 4:
             card_contours.append(approx)
 
+
 # Extract and process each card
 for i, card in enumerate(card_contours):
     warped_card = cardDetector.four_point_transform(img, card.reshape(4, 2))
@@ -38,6 +40,7 @@ for i, card in enumerate(card_contours):
     cv2.imwrite(f'card_{i+1}.jpg', warped_card)
     
     card_val = valueDetector.detect_value(warped_card)  # <-- Example call
+    card_suit = suitDetector.detectSuit(warped_card,card_val)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
