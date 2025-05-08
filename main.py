@@ -4,7 +4,7 @@ import cardDetector
 import valueDetector
 
 # Main Program
-img = cv2.imread('Player1.jpg')
+img = cv2.imread('C:/Users/jsnaj/Desktop/TEC/Semestre4/SemanaTEC/Poker-Hand-Detector/Player1.jpg')
 img = cv2.resize(img, (1000, 1000))  # Resize for consistency
 imgHsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 

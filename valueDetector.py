@@ -2,7 +2,7 @@ import cv2
 import pytesseract
 
 # PyTesseract route (if not added in PATH)
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\PC\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 def detect_value(card_img):
     # grayscale conversion
