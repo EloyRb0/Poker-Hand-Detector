@@ -25,7 +25,7 @@ def detect_value(card_img):
     value = text.strip().upper()
 
     # Basic correction
-    if value == '0':
+    if value == '0' or value == '1':
         value = '10'
     
     print(f'Detected value {value}')
