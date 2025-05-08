@@ -76,10 +76,9 @@ def process_image(img_path, expected_cards):
     cards = []
     for i, card in enumerate(card_contours):
         warped_card = four_point_transform(img, card.reshape(4, 2))
-        cv2.imshow(f'Card {i+1}', warped_card)
 
         value = valueDetector.detect_value(warped_card)
-        suit = 'd'  # Replace with suit detector if you have it
+        suit = 'd'  # Replace with suit detector
         cards.append({'value': value, 'suit': suit})
     
     return cards
