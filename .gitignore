@@ -3,3 +3,6 @@
 /Scripts
 
 **/pyvenv.cfg
+*.jpeg
+*.jpg
+*.pyc
