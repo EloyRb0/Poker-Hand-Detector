@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-
+import colorDetector
 
 
 def isolateFigure(card, card_val):
@@ -37,7 +37,7 @@ def isolateFigure(card, card_val):
         x2 =  FigureX -3
         x1 = FigureX - 45
 
-        y1 = FigureY + (height-FigureY-31) - 50
+        y1 = FigureY + (height-FigureY-31) - 55
         y2 = FigureY + (height-FigureY-30)
 
         #Assures to not surpass card limits
@@ -47,7 +47,7 @@ def isolateFigure(card, card_val):
         y2 = min(y2, card.shape[0])
 
         #Returns the cuted figure
-        return card[y1:y2, x1:x2]
+        return int(y1),int(y2), int(x1),int(x2)
     else:
 
         horizontalDiff = 70 - abs(width/2 - FigureX)
@@ -70,7 +70,7 @@ def isolateFigure(card, card_val):
         y2 = min(y2, card.shape[0])
 
         #Returns the cuted figure
-        return card[y1:y2, int(x1):int(x2)]
+        return int(y1),int(y2), int(x1),int(x2)
 
 
 def detectSuit (card,card_val):
@@ -80,8 +80,14 @@ def detectSuit (card,card_val):
     edges = cv2.Canny(img, 100, 200)  # Lower and upper thresholds
     cv2.imshow('edges.jpg', edges)
 
-    suitRegion = isolateFigure(blur,card_val)
+    y1,y2,x1,x2 = isolateFigure(blur,card_val)
+
+    suitRegion = card[y1:y2,x1:x2]
+
     cv2.imshow('card', suitRegion)
+
+    print(colorDetector.detectColor(suitRegion))
+
 
 
 
