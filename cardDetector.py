@@ -21,7 +21,7 @@ def order_points(pts):
 
     return rect
 
-# Function to warp perspective (get top-down view of card)
+# Function to warp perspective
 def four_point_transform(image, pts, output_size=(200, 300)):
     rect = order_points(pts)
     (tl, tr, br, bl) = rect
@@ -46,6 +46,7 @@ def four_point_transform(image, pts, output_size=(200, 300)):
 
     return warped
 
+# Function to process the image and detect cards
 def process_image(img_path, expected_cards):
     img = cv2.imread(img_path)
     img = cv2.resize(img, (1000, 1000))

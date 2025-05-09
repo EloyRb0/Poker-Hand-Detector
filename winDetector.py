@@ -11,5 +11,5 @@ def compare_hands(hand1_rank: str, hand2_rank: str) -> str:
     elif hand_ranking_order.index(hand1_rank) < hand_ranking_order.index(hand2_rank):
         return "Player 2"
     else:
-        return "It's a tie"
+        return "Tie"
     

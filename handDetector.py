@@ -7,7 +7,7 @@ def detect_hand(cards: list[dict]) -> str:
         '7': 7, '8': 8, '9': 9, '10': 10,
         'J': 11, 'Q': 12, 'K': 13, 'A': 14 
     }
-
+    # Detect the best hand from a dictionary of 7 cards
     def evaluate_hand(five_cards):
         values = sorted([face_to_num[card['value']] for card in five_cards])
         suits = [card['suit'] for card in five_cards]

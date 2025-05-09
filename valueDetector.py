@@ -15,21 +15,20 @@ def clean_ocr_text(raw_text):
     # Common OCR misreads
     text = text.replace('I', '1').replace('O', '0').replace('L', '1')
 
-    # Replace known misreads like "1O", "IO", "I0", "LO" with "10"
+    # Replace known misreads of "10"
     if re.fullmatch(r'[1IL][0O]', text):
         return '10'
     if re.fullmatch(r'10+', text):  # e.g., "100", "10O" → "10"
         return '10'
 
-    # Handle two-letter reads like "KR", "K2", "QZ" → just take the first char
+    # Handle two-letter reads and just take the first char
     if len(text) >= 2 and text[0] in 'JQKA':
         return text[0]
 
-    # If text is fully valid, return it
     if text in VALID_VALUES:
         return text
 
-    return ""  # fallback
+    return ""
 
 def detect_value(card_img):
     # Convert to grayscale and enhance contrast
