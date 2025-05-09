@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import valueDetector
+import suitDetector
 
 # Function to apply HSV mask
 def maskApplication(lower, upper, image):
@@ -79,7 +80,7 @@ def process_image(img_path, expected_cards):
         warped_card = four_point_transform(img, card.reshape(4, 2))
 
         value = valueDetector.detect_value(warped_card)
-        suit = 'd'  # Replace with suit detector
+        suit = suitDetector.detectSuit(warped_card,value)
         cards.append({'value': value, 'suit': suit})
     
     return cards
