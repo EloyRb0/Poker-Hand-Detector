@@ -33,7 +33,6 @@ def isolateFigure(card, card_val):
                 min_dist_y = dist_y
                 FigureY = y
 
-    # print(FigureX, FigureY)
 
     if card_val in {'K', 'Q', 'J'}:
         x1, x2 = FigureX - 50, FigureX - 3
@@ -60,13 +59,10 @@ def detectSuit (card,card_val):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     blur = cv2.GaussianBlur(gray, (7, 7), 0)
     edges = cv2.Canny(img, 100, 200)
-    # cv2.imshow('edges.png', edges)
 
     y1,y2,x1,x2 = isolateFigure(blur,card_val)
 
     suitRegion = img[y1:y2,x1:x2]
-
-    # cv2.imshow('card', suitRegion)
 
     color = colorDetector.detectColor(suitRegion)
 
@@ -76,7 +72,6 @@ def detectSuit (card,card_val):
     bestMatch = None
     maxScore = -1
 
-    # print(color)
 
     for suit, template in templates.items():
         if(color==1):
@@ -106,7 +101,7 @@ def detectSuit (card,card_val):
                         maxScore = score
                         bestMatch = suit
 
-
+    # Uncomment to see the suit detection results for each card
     # print(f"Figura reconocida: {bestMatch}")
 
     return bestMatch

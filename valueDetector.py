@@ -46,7 +46,7 @@ def detect_value(card_img):
     raw_text = results[0] if results else ""
 
     value = clean_ocr_text(raw_text)
-
-    print(f"Value: '{value}'")
+    # Uncomment for seeing the detected value in each card
+    # print(f"Value: '{value}'")
     return value
 
