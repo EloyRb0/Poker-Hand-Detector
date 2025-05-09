@@ -5,7 +5,7 @@ import valueDetector
 import suitDetector
 
 # Main Program
-img = cv2.imread('Table.jpg')
+img = cv2.imread('Player7.jpg')
 img = cv2.resize(img, (1000, 1000))  # Resize for consistency
 imgHsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
