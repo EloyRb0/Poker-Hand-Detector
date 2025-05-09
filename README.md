@@ -39,9 +39,9 @@ This project allows you to **detect and compare two poker hands** from images us
 - Winner: (Player 1 / Player 2 / Tie)
 ---
 ## Supported Image Format
-Table Photo:
-![player1](https://github.com/user-attachments/assets/bcb32514-8195-4c4e-a95b-ecda824166bf)
 Player Hand Photo:
+![player1](https://github.com/user-attachments/assets/bcb32514-8195-4c4e-a95b-ecda824166bf)
+Table Photo:
 ![PokerTest](https://github.com/user-attachments/assets/a525107d-db3f-46d6-b9aa-bde36ead37a3)
 ---
 
