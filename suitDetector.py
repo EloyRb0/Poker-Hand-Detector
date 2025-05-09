@@ -7,7 +7,7 @@ templates = {
     "h": [cv2.imread("./templates/heart1.png", 0), cv2.imread("./templates/heart2.png", 0), cv2.imread("./templates/heart3.png", 0), cv2.imread("./templates/heart4.png", 0), cv2.imread("./templates/heart5.png", 0), cv2.imread("./templates/heart6.png", 0)],
     "d": [cv2.imread("./templates/diamond1.png", 0), cv2.imread("./templates/diamond2.png", 0),cv2.imread("./templates/diamond3.png", 0)],
     "s": [cv2.imread("./templates/spade1.png", 0), cv2.imread("./templates/spade2.png", 0), cv2.imread("./templates/spade3.png", 0), cv2.imread("./templates/spade4.png", 0), cv2.imread("./templates/spade5.png", 0)],
-    "c": [cv2.imread("./templates/club1.png", 0), cv2.imread("./templates/club2.png", 0), cv2.imread("./templates/club3.png", 0), cv2.imread("./templates/club4.png", 0), cv2.imread("./templates/club5.png", 0)],
+    "c": [cv2.imread("./templates/club1.png", 0), cv2.imread("./templates/club2.png", 0), cv2.imread("./templates/club3.png", 0), cv2.imread("./templates/club4.png", 0), cv2.imread("./templates/club5.png", 0), cv2.imread("./templates/club6.png", 0), cv2.imread("./templates/club7.png", 0), cv2.imread("./templates/club8.png", 0), cv2.imread("./templates/club9.png", 0), cv2.imread("./templates/club10.png", 0), cv2.imread("./templates/club11.png", 0), cv2.imread("./templates/club12.png", 0)],
 }
 
 
