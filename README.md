@@ -28,7 +28,8 @@ This project allows you to **detect and compare two poker hands** from images us
    ``` table_cards_1 = cardDetector.process_image('INSERT IMAGE NAME HERE', 5) # Insert table photo ``` \
    ``` player_cards_1 = cardDetector.process_image('INSERT IMAGE NAME HERE', 2)   # Insert Player 1 hand ``` \
    ``` ptable_cards_2 = cardDetector.process_image('INSERT IMAGE NAME HERE', 5)     # Insert table photo as well ``` \
-   ``` player_cards_2 = cardDetector.process_image('INSERT IMAGE NAME HERE', 2)   # Insert Player 2 hand ``` 
+   ``` player_cards_2 = cardDetector.process_image('INSERT IMAGE NAME HERE', 2)   # Insert Player 2 hand ```
+   <br>Pre-tested images can be found at the test_Images directory
 5. Run main.py
 
 ---
